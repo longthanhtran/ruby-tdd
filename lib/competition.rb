@@ -1,3 +1,7 @@
 class Competition
-  attr_accessor :question
+  attr_accessor :questions
+
+  class Closed < StandardError
+
+  end
 end
