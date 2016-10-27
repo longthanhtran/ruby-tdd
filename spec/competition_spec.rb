@@ -7,10 +7,11 @@ describe Competition do
   let(:team) { Team.new("Random name") }
 
   context "having no questions" do
-    before { competition.questions = [] }
+    before { competition.stub(:questions => []) }
+    # before { competition.questions = [] }
 
     it "doesn't accept any teams" do
-      expect(competition).to_not allow_teams_to_enter
+      expect(competition).not_to allow_teams_to_enter
       # competition.should_not allow_teams_to_enter
       # expect do
       #   team.enter_competition(competition)

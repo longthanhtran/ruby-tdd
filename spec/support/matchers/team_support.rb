@@ -1,3 +1,5 @@
+require 'rspec/expectations'
+
 RSpec::Matchers.define :allow_teams_to_enter do |expected|
   match do |actual|
     begin
